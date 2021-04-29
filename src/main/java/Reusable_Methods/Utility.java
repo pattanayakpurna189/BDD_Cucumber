@@ -53,9 +53,6 @@ import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
 import managers.ExtentManager;
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.Screenshot;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class Utility {
 	public static ThreadLocal<ExtentTest> parentTest=new ThreadLocal<ExtentTest>();
@@ -63,18 +60,14 @@ public class Utility {
 	public static ThreadLocal<String> SheetName = new ThreadLocal<String>();
 	public static ThreadLocal<RemoteWebDriver> webdriver = new ThreadLocal<RemoteWebDriver>();
 	public static ThreadLocal<AppiumDriver<MobileElement>> appiumDriver = new ThreadLocal<AppiumDriver<MobileElement>>();
-	
 	public static ThreadLocal<String> Environment = new ThreadLocal<String>();
 	public static ThreadLocal<String> Login_DataBinding = new ThreadLocal<String>();
 	public static ThreadLocal<String> output_Array_Name = new ThreadLocal<String>();
 	public static ThreadLocal<String> JIRA = new ThreadLocal<String>();
 	
-	//DataManager data = new DataManager();
 	ExtentManager ext_man = new ExtentManager();
-	//DataManager data = new DataManager();
 	String Output_Data_File = ExtentManager.OutPut_File_Name;
 	String Result_Date = ExtentManager.resultdate;
-	//LoginPage login = new LoginPage();
 	
 	public static synchronized String readProperty(String key) {
 		String value = null;
@@ -113,12 +106,9 @@ public class Utility {
 
 
 }
-	
-	
+		
 	//Web Application Utilies***************************************************************************************************************************************
-	
-	
-	
+		
 	public synchronized WebElement get_Element(RemoteWebDriver driver,By locator) {
 		WebElement ele = null;
 		try {
@@ -501,8 +491,6 @@ public class Utility {
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	}
 	
-	
-	
 	public synchronized void wait_for_Element(String MethodName, AppiumDriver<MobileElement> driver,By locator, int timeToWait) throws Exception {
 		int my_time = 0;
 			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -627,22 +615,6 @@ public class Utility {
 		}
 			
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
 	
 	
 	
@@ -809,8 +781,7 @@ public class Utility {
 			connection.close();
 			return data_values;
 	}
-	
-	
+		
 	public synchronized String CaptureScreenshot(RemoteWebDriver driver)
 	{
 		SimpleDateFormat formatter =new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss.SSS");
@@ -842,9 +813,7 @@ public class Utility {
 		return ".\\Screenshots\\"+imageName;
 		//return SrcFile;
 	}
-	
-	
-	
+		
 	public synchronized String CaptureScreenshot(AppiumDriver<MobileElement> driver)
 	{
 		SimpleDateFormat formatter =new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss.SSS");
@@ -973,8 +942,7 @@ public class Utility {
 			e.printStackTrace();
 		}
 	}
-	
-	
+		
 	public synchronized RemoteWebDriver getDriver() {
 		return webdriver.get();
 	}
@@ -1114,10 +1082,8 @@ public class Utility {
 		return output_Array_Name.get().toString();
 	}
 	
-	
 	//For executor***************************************************
-	
-	
+		
 	public ArrayList<String> RemoveDuplicateString(ArrayList<String> al){
 		 
 		Object[] st = al.toArray();
@@ -1264,13 +1230,6 @@ public class Utility {
 		
 	}
 	
-	
-	
-	
-	
-	
-//Jovita
-	
 	public synchronized String getAttribute(RemoteWebDriver driver,By locator, String AttributeName) throws Exception {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		String Data = "";
@@ -1313,15 +1272,6 @@ public class Utility {
 		
 
 	}
-	
-	
-	
-	
-	
-	
-	
-
-	//Purna
 	
 	public synchronized void Select_Dropdown(String MethodName, RemoteWebDriver driver,By locator,String Data, int timeToWait) throws Exception {
 		int my_time = 0;
@@ -1368,55 +1318,6 @@ public class Utility {
 		return ele;
 	}
 	
-	
-	public synchronized String FUll_Page_Screenshot(RemoteWebDriver driver) {
-
-		SimpleDateFormat formatter =new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss.SSS");
-		Date date=new Date();
-		//File SrcFile= null;
-		String imageName="img"+formatter.format(date)+".png";
-		//System.out.println(ExtentManager.resultPath);
-		String screenshot_path = ExtentManager.resultPath+"\\Screenshots";
-		//String screenshot_path ="./Screenshots";
-		File file = new File(screenshot_path);
-		if(!(file.exists())) {
-			file.mkdirs();
-		}
-		try{
-			
-			File screenshot = new File(screenshot_path+"\\"+imageName);
-			 
-			 Screenshot screenshots =new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);             
-			  try {                 
-			  ImageIO.write(screenshots.getImage(),"PNG",screenshot);             
-			} catch (IOException e) {                           
-			  e.printStackTrace();  
-			 }    
-			 
-			 
-			 
-			 
-			 
-		}catch(Exception e) {
-			e.printStackTrace();	
-		}
-		
-		return ".\\Screenshots\\"+imageName;
-		
-		
-	}
-	
-	
-	public synchronized void Info_Full_Page_SS_Old(RemoteWebDriver driver,String Details) {
-		try {
-			parentTest.get().info(Details,MediaEntityBuilder.createScreenCaptureFromPath(FUll_Page_Screenshot(driver)).build());
-			
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	//jayashree
 	public synchronized void Scroll_Down(RemoteWebDriver driver,By locator) throws Exception {
 		try {
 			
@@ -1428,10 +1329,6 @@ public class Utility {
 			
 		}
 	}
-	
-	
-	
-	//date picker
 	
 	public synchronized String getDate_MM_DD_YYYY(String Date) {
 		String value;
@@ -1594,140 +1491,123 @@ public class Utility {
 		
 	}
 	
+	public synchronized void Slider_movement(RemoteWebDriver driver, By locator,int x, int y){
+		try {
+            WebElement ele = get_Element(driver, locator);
+            org.openqa.selenium.Dimension dim=ele.getSize();
+            x=dim.getWidth();
+            
+            Actions action = new Actions(driver);
+            action.clickAndHold(ele).moveByOffset(x-350,y).release().build().perform();;
+            
+        }catch(Exception e) {
+            
+        }
+    }
 	
-	
-	
-	
-	
-	
-	//Priya
-		public synchronized void Slider_movement(RemoteWebDriver driver, By locator,int x, int y){
-
-			 
-
-	        try {
-	            WebElement ele = get_Element(driver, locator);
-	            org.openqa.selenium.Dimension dim=ele.getSize();
-	            x=dim.getWidth();
-	            
-	            Actions action = new Actions(driver);
-	            action.clickAndHold(ele).moveByOffset(x-350,y).release().build().perform();;
-	            
-	        }catch(Exception e) {
-	            
-	        }
-	    }
-		
-		
-		public synchronized boolean isEnabled(RemoteWebDriver driver,By locator) throws InterruptedException {
-			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-			boolean flag = false;
-				WebElement ele = null;
-				
-				try {
-						ele = get_Element(driver, locator);
-						if(ele!=null) {
-						
-						
-							if(ele.isEnabled()){
-								//ele.click();
-								flag = true;
-							}
-						}
-						
-					}catch(Exception e) {
-						
-					}
-				
-				driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-				return flag;
-		}
-		
-		
-		public synchronized void SetInnerText(String MethodName, RemoteWebDriver driver,By locator,String data, int timeToWait) throws Exception  {
-			int my_time = 0;
-				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-				while(my_time<timeToWait) {
-					my_time = my_time+1;
-					WebElement ele = null;
-					try {
-						ele = get_Element(driver, locator);
-						if(ele!=null) {
-							if(ele.isEnabled()) {
-								JavascriptExecutor js = ((JavascriptExecutor)driver);
-								js.executeScript("arguments[0].innerText = '"+data+"';", ele);
-								
-								break;
-							}else {
-								Thread.sleep(1000);
-							}
-						}else {
-							Thread.sleep(1000);
-						}
-						
-					}catch(Exception e) {
-						Thread.sleep(1000);
-					}
-				}
-				
-				if(my_time>=timeToWait) {
-					ThrowException(MethodName, driver, locator);
-				}
-				driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		}
-		
-		
-		
-	//Mobile Application
-	//Jovita
-		public synchronized void Sendkeys_Clear(String MethodName, AppiumDriver<MobileElement> driver,By locator,String data, int timeToWait) throws Exception  {
-			int my_time = 0;
-				driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-				while(my_time<timeToWait) {
-					my_time = my_time+1;
-					MobileElement ele = null;
-					try {
-						ele = get_AppiumElement(driver, locator);
-						if(ele!=null) {
-							if(ele.isEnabled()) {
-								ele.click();
-								Thread.sleep(100);
-								//ele.clear();
-								Thread.sleep(100);
-								ele.sendKeys(data);
-								break;
-							}else {
-								Thread.sleep(1000);
-							}
-						}else {
-							Thread.sleep(1000);
-						}
-						
-					}catch(Exception e) {
-						Thread.sleep(1000);
-					}
-				}
-				
-				if(my_time>=timeToWait) {
-					ThrowException(MethodName, driver, locator);
-				}
-				driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		}
-		
-		public synchronized List<MobileElement> getAll_Element(AppiumDriver<MobileElement> driver,By locator) {
-			List<MobileElement> ele = null;
+	public synchronized boolean isEnabled(RemoteWebDriver driver,By locator) throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		boolean flag = false;
+			WebElement ele = null;
+			
 			try {
-				 ele = driver.findElements(locator);
-				
-			}catch(Exception e ) {
-				
+					ele = get_Element(driver, locator);
+					if(ele!=null) {
+					
+					
+						if(ele.isEnabled()){
+							//ele.click();
+							flag = true;
+						}
+					}
+					
+				}catch(Exception e) {
+					
+				}
+			
+			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+			return flag;
+	}
+	
+	public synchronized void SetInnerText(String MethodName, RemoteWebDriver driver,By locator,String data, int timeToWait) throws Exception  {
+		int my_time = 0;
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			while(my_time<timeToWait) {
+				my_time = my_time+1;
+				WebElement ele = null;
+				try {
+					ele = get_Element(driver, locator);
+					if(ele!=null) {
+						if(ele.isEnabled()) {
+							JavascriptExecutor js = ((JavascriptExecutor)driver);
+							js.executeScript("arguments[0].innerText = '"+data+"';", ele);
+							
+							break;
+						}else {
+							Thread.sleep(1000);
+						}
+					}else {
+						Thread.sleep(1000);
+					}
+					
+				}catch(Exception e) {
+					Thread.sleep(1000);
+				}
 			}
 			
-			return ele;
-		}
+			if(my_time>=timeToWait) {
+				ThrowException(MethodName, driver, locator);
+			}
+			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	}
 	
+	public synchronized void Sendkeys_Clear(String MethodName, AppiumDriver<MobileElement> driver,By locator,String data, int timeToWait) throws Exception  {
+		int my_time = 0;
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			while(my_time<timeToWait) {
+				my_time = my_time+1;
+				MobileElement ele = null;
+				try {
+					ele = get_AppiumElement(driver, locator);
+					if(ele!=null) {
+						if(ele.isEnabled()) {
+							ele.click();
+							Thread.sleep(100);
+							//ele.clear();
+							Thread.sleep(100);
+							ele.sendKeys(data);
+							break;
+						}else {
+							Thread.sleep(1000);
+						}
+					}else {
+						Thread.sleep(1000);
+					}
+					
+				}catch(Exception e) {
+					Thread.sleep(1000);
+				}
+			}
+			
+			if(my_time>=timeToWait) {
+				ThrowException(MethodName, driver, locator);
+			}
+			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	}
+	
+	public synchronized List<MobileElement> getAll_Element(AppiumDriver<MobileElement> driver,By locator) {
+		List<MobileElement> ele = null;
+		try {
+			 ele = driver.findElements(locator);
+			
+		}catch(Exception e ) {
+			
+		}
 		
-		public synchronized MobileElement get_Element(AppiumDriver<MobileElement> driver,By locator) {
+		return ele;
+	}
+		
+	public synchronized MobileElement get_Element(AppiumDriver<MobileElement> driver,By locator) {
 			MobileElement ele = null;
 			try {
 				 ele = driver.findElement(locator);
@@ -1738,7 +1618,8 @@ public class Utility {
 			
 			return ele;
 		}
-		public synchronized void Select_Dropdown(String MethodName, AppiumDriver<MobileElement> driver,By locator,String Data, int timeToWait) throws Exception {
+		
+	public synchronized void Select_Dropdown(String MethodName, AppiumDriver<MobileElement> driver,By locator,String Data, int timeToWait) throws Exception {
 			int my_time = 0;
 				driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 				while(my_time<timeToWait) {
@@ -1771,9 +1652,6 @@ public class Utility {
 				driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		}
 	
-	
-	
-	
 	public synchronized void Scroll_To_A_Element(AppiumDriver<MobileElement> driver, By locator){
 
 		try {
@@ -1786,49 +1664,6 @@ public class Utility {
 			
 		}
 	}
-
-	public synchronized String FUll_Page_Screenshot(AppiumDriver<MobileElement> driver) {
-
-		SimpleDateFormat formatter =new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss.SSS");
-		Date date=new Date();
-		//File SrcFile= null;
-		String imageName="img"+formatter.format(date)+".png";
-		//System.out.println(ExtentManager.resultPath);
-		String screenshot_path = ExtentManager.resultPath+"\\Screenshots";
-		//String screenshot_path ="./Screenshots";
-		File file = new File(screenshot_path);
-		if(!(file.exists())) {
-			file.mkdirs();
-		}
-		try{
-			
-			File screenshot = new File(screenshot_path+"\\"+imageName);
-			 
-			 Screenshot screenshots =new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);             
-			  try {                 
-			  ImageIO.write(screenshots.getImage(),"PNG",screenshot);             
-			} catch (IOException e) {                           
-			  e.printStackTrace();  
-			 }    
-			 
-			 
-			 
-			 
-			 
-		}catch(Exception e) {
-			e.printStackTrace();	
-		}
-		
-		return ".\\Screenshots\\"+imageName;
-		
-		
-	}
-	
-	
-	
-		
-
-// Added By Purna
 	
 	public synchronized void Navigate_Back(AppiumDriver<MobileElement> driver,String TypeOfDevice) throws Exception {
 		try {
@@ -1845,12 +1680,6 @@ public class Utility {
 		}
 			
 	}
-	
-	
-	
-	
-	
-	//Added for IB
 	
 	public synchronized void Drag_and_Drop(RemoteWebDriver driver, By src,By  desc){
 
@@ -1870,8 +1699,7 @@ public class Utility {
             
         }
     }	
-	
-	
+		
 	public synchronized void doubleClick(RemoteWebDriver driver, By locator){
 		try {
         	 WebElement ele = get_Element(driver, locator);
@@ -1920,8 +1748,7 @@ public class Utility {
 			}
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	}
-	
-	
+		
 	public synchronized void SendKeys_WithoutClearing_Text(String MethodName, RemoteWebDriver driver,By locator,String data, int timeToWait) throws Exception  {
 		int my_time = 0;
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -1955,13 +1782,7 @@ public class Utility {
 			}
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	}
-	
-	
-	
-	
-
-	
-	
+		
 	public synchronized void Move_To_element(RemoteWebDriver driver, By locator){
 
 		 try {
@@ -1977,8 +1798,7 @@ public class Utility {
         }
         
 	}
-	
-	
+		
 	public synchronized boolean isDisplayedSuccess(RemoteWebDriver driver,By locator) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		boolean flag = false;
@@ -1999,9 +1819,7 @@ public class Utility {
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			return flag;
 	}
-	
-	
-	
+		
 	public synchronized void Write_Runtime_Data(String Key,String Value) {
 			String Application = readProperty("Application");
 			File  path = new File("./JsonData/"+Application+"/Output/"+Result_Date);
@@ -2058,9 +1876,7 @@ public class Utility {
 		return value;
 		
 	}
-	
-	
-	
+			
 	public synchronized void Drag_and_Drop_By_Coordinates(AppiumDriver<MobileElement> driver, By src, int coordinates){
 
         try {
@@ -2079,13 +1895,6 @@ public class Utility {
             
         }
     }
-	
-	
-	
-	
-	
-	
-	
 	
 	public synchronized String Full_CaptureScreenshot(RemoteWebDriver driver)
 	{
@@ -2245,8 +2054,6 @@ public class Utility {
 		}
 	}
 	
-	
-	
     public synchronized void Move_To_element_Coordinates(RemoteWebDriver driver, By locator,int x,int y){
     	try {
         	 WebElement ele = get_Element(driver, locator);
@@ -2262,14 +2069,6 @@ public class Utility {
         
 	}
    
-     
-     
-//Aswini Jul-20
-
-     
-     
-
-
      public synchronized void Move_To_Top_of_The_Page(RemoteWebDriver driver){
 
          try {
@@ -2291,10 +2090,7 @@ public class Utility {
         System.out.println(e);
         }
      }
-     
-	
-	
-	
+     	
      public synchronized void CLose_Window() {
  		try {
  			Robot robot = new Robot();
@@ -2308,11 +2104,8 @@ public class Utility {
  		}
  		
  	}
-	
-	
-     
-	
-     public synchronized boolean isDisplayed_Without_isEnabled(AppiumDriver<MobileElement> driver,By locator) throws InterruptedException {
+	    
+	 public synchronized boolean isDisplayed_Without_isEnabled(AppiumDriver<MobileElement> driver,By locator) throws InterruptedException {
          driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
          boolean flag = false;
          MobileElement ele = null;
@@ -2332,21 +2125,6 @@ public class Utility {
              return flag;
      }
      
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     //Merged Code 03_Aug *********************************************************************************************
-     
-
  	//jayashree 19-07-2020
  	public synchronized void Slider_movement(AppiumDriver<MobileElement> driver, By locator,int x, int y){
 
@@ -2516,8 +2294,6 @@ public class Utility {
  			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
  	}
      
-     
-     
      //jayashree*********************
  	
  	public synchronized void Scroll_To_A_MobileElement(AppiumDriver<MobileElement> driver, MobileElement ele){
@@ -2532,8 +2308,7 @@ public class Utility {
 			
 		}
 	}
- 	
-     
+ 	     
  	public synchronized void ClearText(String MethodName, AppiumDriver<MobileElement> driver,By locator, int timeToWait) throws Exception  {
 		int my_time = 0;
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -2568,8 +2343,6 @@ public class Utility {
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	}
  	
- 	
-
     public void ThrowException_DataSetUp() throws Exception {
     	Fail_WithOut_SS("Please varify the Databindings, in driver and test data sheet");
 			String CaseName = output_Array_Name.get();
@@ -2601,13 +2374,9 @@ public class Utility {
             sb.append(AlphaNumericString 
                           .charAt(index)); 
         } 
-  
         return sb.toString(); 
-        
-
-    }
+     }
     
-	
 	public synchronized void switchAppiumContext(String context, AppiumDriver<MobileElement> driver) {
 		int num =  getAppiumDriver().getContextHandles().size();
 		System.out.println("Num is"+ num);
@@ -2633,7 +2402,6 @@ public class Utility {
 		
 	}
    
-
     /**
      * method to long press on specific element by passing locator
      *
