@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Framework Runner]">
+  <test name="Framework executor xml file">
+    <classes>
+      <class name="Runner.Executor">
+        <methods>
+          <include name="A"/>
+        </methods>
+      </class> <!-- Runner.Executor -->
+    </classes>
+  </test> <!-- Framework executor xml file -->
+</suite> <!-- Failed suite [Framework Runner] -->

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">2 suites</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-IB_Accounts">
+              <span class="suite-name border-passed">IB_Accounts</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-IB_Accounts">
+                    <span>D:\Test\My_Framework_2020\Workspace\BDD\Suites\IB\IB_Accounts.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-IB_Accounts">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-IB_Accounts">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-IB_Accounts">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-IB_Accounts">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-IB_Accounts">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-IB_Accounts">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">1 method,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-IB_Accounts" class="hide-methods passed suite-IB_Accounts"> (hide)</a> <!-- hide-methods passed suite-IB_Accounts -->
+                      <a href="#" panel-name="suite-IB_Accounts" class="show-methods passed suite-IB_Accounts"> (show)</a> <!-- show-methods passed suite-IB_Accounts -->
+                    </span>
+                    <div class="method-list-content passed suite-IB_Accounts">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-IB_Accounts" title="Run_Time_xml_Generator.BDD_TestNG_Runner" hash-for-method="runner_SetUp(IB_PreLogin_TC_078_01, Prelogin, IB_Accounts.feature, @IB_Accounts_TC_001, StepDefinations/Accounts,...)">runner_SetUp(IB_PreLogin_TC_078_01, Prelogin, IB_Accounts.feature, @IB_Accounts_TC_001, StepDefinations/Accounts,...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-IB_Accounts -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-All_Suites" class="panel All_Suites">
+        </div> <!-- panel All_Suites -->
+        <div panel-name="suite-IB_Accounts" class="panel IB_Accounts">
+          <div class="suite-IB_Accounts-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Run_Time_xml_Generator.BDD_TestNG_Runner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runner_SetUp(IB_PreLogin_TC_078_01, Prelogin, IB_Accounts.feature, @IB_Accounts_TC_001, StepDefinations/Accounts,...)">
+                  </a> <!-- runner_SetUp(IB_PreLogin_TC_078_01, Prelogin, IB_Accounts.feature, @IB_Accounts_TC_001, StepDefinations/Accounts,...) -->
+                  <span class="method-name">runner_SetUp</span>
+                  <span class="parameters">(IB_PreLogin_TC_078_01, Prelogin, IB_Accounts.feature, @IB_Accounts_TC_001, StepDefinations/Accounts, CHROME, Credentials_1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-IB_Accounts-class-passed -->
+        </div> <!-- panel IB_Accounts -->
+        <div panel-name="test-xml-All_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\Test\My_Framework_2020\Workspace\BDD\TestNG.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;All_Suites&quot;&gt;
+  &lt;suite-files&gt;
+    &lt;suite-file path=&quot;Suites//IB//IB_Accounts.xml&quot;/&gt;
+  &lt;/suite-files&gt;
+&lt;/suite&gt; &lt;!-- All_Suites --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="test-xml-IB_Accounts" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\Test\My_Framework_2020\Workspace\BDD\Suites\IB\IB_Accounts.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;IB_Accounts&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test name=&quot;ExecuteOn : CHROME || IB_Accounts_TC_001 : User views CASA Account Summary&quot;&gt;
+    &lt;parameter name=&quot;StepDefinations&quot; value=&quot;StepDefinations/Accounts&quot;/&gt;
+    &lt;parameter name=&quot;DataBinding&quot; value=&quot;IB_PreLogin_TC_078_01&quot;/&gt;
+    &lt;parameter name=&quot;Environment&quot; value=&quot;CHROME&quot;/&gt;
+    &lt;parameter name=&quot;SheetName&quot; value=&quot;Prelogin&quot;/&gt;
+    &lt;parameter name=&quot;Feature_File_Tag&quot; value=&quot;@IB_Accounts_TC_001&quot;/&gt;
+    &lt;parameter name=&quot;Feature_File&quot; value=&quot;IB_Accounts.feature&quot;/&gt;
+    &lt;parameter name=&quot;Login_DataBindings&quot; value=&quot;Credentials_1&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Run_Time_xml_Generator.BDD_TestNG_Runner&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;runner_SetUp&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- Run_Time_xml_Generator.BDD_TestNG_Runner --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ExecuteOn : CHROME || IB_Accounts_TC_001 : User views CASA Account Summary --&gt;
+&lt;/suite&gt; &lt;!-- IB_Accounts --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-All_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for All_Suites</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-IB_Accounts" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for IB_Accounts</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">ExecuteOn : CHROME || IB_Accounts_TC_001 : User views CASA Account Summary (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-All_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for All_Suites</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-IB_Accounts" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for IB_Accounts</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-All_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for All_Suites</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_All_Suites');
+function tableData_All_Suites() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(0);
+window.suiteTableData['All_Suites']= { tableData: data, tableDiv: 'times-div-All_Suites'}
+return data;
+}
+              </script>
+              <div id="times-div-All_Suites">
+              </div> <!-- times-div-All_Suites -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-IB_Accounts" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for IB_Accounts</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_IB_Accounts');
+function tableData_IB_Accounts() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'runner_SetUp')
+data.setCell(0, 2, 'Run_Time_xml_Generator.BDD_TestNG_Runner')
+data.setCell(0, 3, 9019);
+window.suiteTableData['IB_Accounts']= { tableData: data, tableDiv: 'times-div-IB_Accounts'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <div id="times-div-IB_Accounts">
+              </div> <!-- times-div-IB_Accounts -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-All_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for All_Suites</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-IB_Accounts" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for IB_Accounts</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-All_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-IB_Accounts" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-All_Suites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-IB_Accounts" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">Run_Time_xml_Generator.BDD_TestNG_Runner</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">onSuiteStart(org.testng.TestRunner@658c5a19)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-test before">
+                <span class="method-name">onTestStart(org.testng.TestRunner@658c5a19)</span>
+                <span class="method-start">224 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">runner_SetUp(IB_PreLogin_TC_078_01, Prelogin, IB_Accounts.feature, @IB_Accounts_TC_001, StepDefinations/Accounts,...)</span>
+                <span class="method-start">224 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">onFinish(org.testng.TestRunner@658c5a19)</span>
+                <span class="method-start">9243 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

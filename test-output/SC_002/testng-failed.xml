@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [SC_002]" parallel="tests">
+  <parameter name="StepDefinations" value="StepDefinations"/>
+  <parameter name="DataBinding" value="Card3"/>
+  <parameter name="SheetName" value="Transfer"/>
+  <parameter name="Feature_File_Tag" value="@SC_002_TC_001"/>
+  <parameter name="Feature_File" value="Cards/Scenario_2.feature"/>
+  <test name="SC_002_TC_001 : Validate other bank transfer">
+    <parameter name="StepDefinations" value="StepDefinations"/>
+    <parameter name="DataBinding" value="Card3"/>
+    <parameter name="SheetName" value="Transfer"/>
+    <parameter name="Feature_File_Tag" value="@SC_002_TC_001"/>
+    <parameter name="Feature_File" value="Cards/Scenario_2.feature"/>
+    <classes>
+      <class name="Run_Time_xml_Generator.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Run_Time_xml_Generator.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- SC_002_TC_001 : Validate other bank transfer -->
+</suite> <!-- Failed suite [SC_002] -->

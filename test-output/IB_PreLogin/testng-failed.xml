@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [IB_PreLogin]" parallel="tests">
+  <parameter name="StepDefinations" value="StepDefinations/PreLogin"/>
+  <parameter name="DataBinding" value="Account_2"/>
+  <parameter name="Environment" value="FF"/>
+  <parameter name="SheetName" value="Accounts"/>
+  <parameter name="Feature_File_Tag" value="@IB_PreLogin_TC_009"/>
+  <parameter name="Feature_File" value="IB_PreLogin.feature"/>
+  <parameter name="Login_DataBindings" value="Credentials_2"/>
+  <test name="ExecuteOn : 0_CHROME || IB_PreLogin_TC_004 : User Self Registration using Credit Card">
+    <parameter name="StepDefinations" value="StepDefinations/PreLogin"/>
+    <parameter name="DataBinding" value="Account_1"/>
+    <parameter name="Environment" value="CHROME"/>
+    <parameter name="SheetName" value="Accounts"/>
+    <parameter name="Feature_File_Tag" value="@IB_PreLogin_TC_009"/>
+    <parameter name="Feature_File" value="IB_PreLogin.feature"/>
+    <parameter name="Login_DataBindings" value="Credentials_1"/>
+    <classes>
+      <class name="Run_Time_xml_Generator.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Run_Time_xml_Generator.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- ExecuteOn : 0_CHROME || IB_PreLogin_TC_004 : User Self Registration using Credit Card -->
+  <test name="ExecuteOn : 1_FF || IB_PreLogin_TC_004 : User Self Registration using Credit Card">
+    <parameter name="StepDefinations" value="StepDefinations/PreLogin"/>
+    <parameter name="DataBinding" value="Account_2"/>
+    <parameter name="Environment" value="FF"/>
+    <parameter name="SheetName" value="Accounts"/>
+    <parameter name="Feature_File_Tag" value="@IB_PreLogin_TC_009"/>
+    <parameter name="Feature_File" value="IB_PreLogin.feature"/>
+    <parameter name="Login_DataBindings" value="Credentials_2"/>
+    <classes>
+      <class name="Run_Time_xml_Generator.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Run_Time_xml_Generator.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- ExecuteOn : 1_FF || IB_PreLogin_TC_004 : User Self Registration using Credit Card -->
+</suite> <!-- Failed suite [IB_PreLogin] -->

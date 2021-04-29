@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Framework Runner" >
+  <test name="Framework executor xml file">
+    <classes>
+      <class name="Runner.Executor">
+        <methods>
+          <include name="A"/>
+        </methods>
+      </class> <!-- Run_Time_xml_Generator.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- ExecuteOn : CHROME || IB_Accounts_TC_001 : User views CASA Account Summary -->
+</suite> <!-- IB_Accounts -->

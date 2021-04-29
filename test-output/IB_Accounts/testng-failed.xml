@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [IB_Accounts]" parallel="tests">
+  <parameter name="StepDefinations" value="StepDefinations/Accounts"/>
+  <parameter name="DataBinding" value="IB_PreLogin_TC_078_01"/>
+  <parameter name="Environment" value="CHROME"/>
+  <parameter name="SheetName" value="Prelogin"/>
+  <parameter name="Feature_File_Tag" value="@IB_Accounts_TC_001"/>
+  <parameter name="Feature_File" value="IB_Accounts.feature"/>
+  <parameter name="Login_DataBindings" value="Credentials_1"/>
+  <test name="ExecuteOn : CHROME || IB_Accounts_TC_001 : User views CASA Account Summary">
+    <parameter name="StepDefinations" value="StepDefinations/Accounts"/>
+    <parameter name="DataBinding" value="IB_PreLogin_TC_078_01"/>
+    <parameter name="Environment" value="CHROME"/>
+    <parameter name="SheetName" value="Prelogin"/>
+    <parameter name="Feature_File_Tag" value="@IB_Accounts_TC_001"/>
+    <parameter name="Feature_File" value="IB_Accounts.feature"/>
+    <parameter name="Login_DataBindings" value="Credentials_1"/>
+    <classes>
+      <class name="Run_Time_xml_Generator.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Run_Time_xml_Generator.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- ExecuteOn : CHROME || IB_Accounts_TC_001 : User views CASA Account Summary -->
+</suite> <!-- Failed suite [IB_Accounts] -->

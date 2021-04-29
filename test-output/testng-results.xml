@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All_Suites" duration-ms="0" started-at="2021-04-29T19:21:21Z" finished-at="2021-04-29T19:21:21Z">
+    <groups>
+    </groups>
+  </suite> <!-- All_Suites -->
+  <suite name="IB_Accounts" duration-ms="9203" started-at="2021-04-29T19:21:11Z" finished-at="2021-04-29T19:21:21Z">
+    <groups>
+    </groups>
+    <test name="ExecuteOn : CHROME || IB_Accounts_TC_001 : User views CASA Account Summary" duration-ms="9203" started-at="2021-04-29T19:21:11Z" finished-at="2021-04-29T19:21:21Z">
+      <class name="Run_Time_xml_Generator.BDD_TestNG_Runner">
+        <test-method status="PASS" signature="onSuiteStart(org.testng.ITestContext)[pri:0, instance:Run_Time_xml_Generator.BDD_TestNG_Runner@5d534f5d]" name="onSuiteStart" is-config="true" duration-ms="224" started-at="2021-04-30T00:51:11Z" finished-at="2021-04-30T00:51:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@658c5a19]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onSuiteStart -->
+        <test-method status="PASS" signature="runner_SetUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Run_Time_xml_Generator.BDD_TestNG_Runner@5d534f5d]" name="runner_SetUp" duration-ms="9019" started-at="2021-04-30T00:51:11Z" finished-at="2021-04-30T00:51:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IB_PreLogin_TC_078_01]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Prelogin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[IB_Accounts.feature]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[@IB_Accounts_TC_001]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[StepDefinations/Accounts]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Credentials_1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runner_SetUp -->
+        <test-method status="PASS" signature="onTestStart(org.testng.ITestContext)[pri:0, instance:Run_Time_xml_Generator.BDD_TestNG_Runner@5d534f5d]" name="onTestStart" is-config="true" duration-ms="0" started-at="2021-04-30T00:51:11Z" finished-at="2021-04-30T00:51:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@658c5a19]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onTestStart -->
+        <test-method status="PASS" signature="onFinish(org.testng.ITestContext)[pri:0, instance:Run_Time_xml_Generator.BDD_TestNG_Runner@5d534f5d]" name="onFinish" is-config="true" duration-ms="184" started-at="2021-04-30T00:51:20Z" finished-at="2021-04-30T00:51:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@658c5a19]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onFinish -->
+      </class> <!-- Run_Time_xml_Generator.BDD_TestNG_Runner -->
+    </test> <!-- ExecuteOn : CHROME || IB_Accounts_TC_001 : User views CASA Account Summary -->
+  </suite> <!-- IB_Accounts -->
+</testng-results>

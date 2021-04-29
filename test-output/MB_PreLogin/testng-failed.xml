@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [MB_PreLogin]" parallel="tests">
+  <parameter name="StepDefinations" value="StepDefinations/PreLogin"/>
+  <parameter name="DataBinding" value="Account_1"/>
+  <parameter name="Environment" value="BS_Samsung_S10"/>
+  <parameter name="SheetName" value="Accounts"/>
+  <parameter name="Feature_File_Tag" value="@MB_PreLogin_TC_002"/>
+  <parameter name="Feature_File" value="MB_PreLogin.feature"/>
+  <parameter name="Login_DataBindings" value="Credentials_1"/>
+  <test name="ExecuteOn : BS_Samsung_S10 || MB_PreLogin_TC_001 : User Self Registration using Account Number">
+    <parameter name="StepDefinations" value="StepDefinations/PreLogin"/>
+    <parameter name="DataBinding" value="Account_1"/>
+    <parameter name="Environment" value="BS_Samsung_S10"/>
+    <parameter name="SheetName" value="Accounts"/>
+    <parameter name="Feature_File_Tag" value="@MB_PreLogin_TC_002"/>
+    <parameter name="Feature_File" value="MB_PreLogin.feature"/>
+    <parameter name="Login_DataBindings" value="Credentials_1"/>
+    <classes>
+      <class name="Run_Time_xml_Generator.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Run_Time_xml_Generator.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- ExecuteOn : BS_Samsung_S10 || MB_PreLogin_TC_001 : User Self Registration using Account Number -->
+</suite> <!-- Failed suite [MB_PreLogin] -->

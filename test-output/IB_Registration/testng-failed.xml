@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [IB_Registration]" parallel="tests">
+  <parameter name="StepDefinations" value="StepDefinations/Registration"/>
+  <parameter name="DataBinding" value="Register_2"/>
+  <parameter name="Environment" value="FF"/>
+  <parameter name="SheetName" value="Register"/>
+  <parameter name="Feature_File_Tag" value="@IB_Register_TC_001"/>
+  <parameter name="Feature_File" value="IB_Registration.feature"/>
+  <parameter name="Login_DataBindings" value="Credentials_2"/>
+  <test name="ExecuteOn : 0_CHROME || IB_Registration_TC_001 : Validate registration for the IB">
+    <parameter name="StepDefinations" value="StepDefinations/Registration"/>
+    <parameter name="DataBinding" value="Register_1"/>
+    <parameter name="Environment" value="CHROME"/>
+    <parameter name="SheetName" value="Register"/>
+    <parameter name="Feature_File_Tag" value="@IB_Register_TC_001"/>
+    <parameter name="Feature_File" value="IB_Registration.feature"/>
+    <parameter name="Login_DataBindings" value="Credentials_1"/>
+    <classes>
+      <class name="Run_Time_xml_Generator.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Run_Time_xml_Generator.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- ExecuteOn : 0_CHROME || IB_Registration_TC_001 : Validate registration for the IB -->
+  <test name="ExecuteOn : 1_FF || IB_Registration_TC_001 : Validate registration for the IB">
+    <parameter name="StepDefinations" value="StepDefinations/Registration"/>
+    <parameter name="DataBinding" value="Register_2"/>
+    <parameter name="Environment" value="FF"/>
+    <parameter name="SheetName" value="Register"/>
+    <parameter name="Feature_File_Tag" value="@IB_Register_TC_001"/>
+    <parameter name="Feature_File" value="IB_Registration.feature"/>
+    <parameter name="Login_DataBindings" value="Credentials_2"/>
+    <classes>
+      <class name="Run_Time_xml_Generator.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Run_Time_xml_Generator.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- ExecuteOn : 1_FF || IB_Registration_TC_001 : Validate registration for the IB -->
+  <test name="ExecuteOn : 0_CHROME || IB_Registration_TC_002 : Validate registration for the IB">
+    <parameter name="StepDefinations" value="StepDefinations/Registration"/>
+    <parameter name="DataBinding" value="Register_1"/>
+    <parameter name="Environment" value="CHROME"/>
+    <parameter name="SheetName" value="Register"/>
+    <parameter name="Feature_File_Tag" value="@IB_Register_TC_001"/>
+    <parameter name="Feature_File" value="IB_Registration.feature"/>
+    <parameter name="Login_DataBindings" value="Credentials_1"/>
+    <classes>
+      <class name="Run_Time_xml_Generator.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Run_Time_xml_Generator.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- ExecuteOn : 0_CHROME || IB_Registration_TC_002 : Validate registration for the IB -->
+  <test name="ExecuteOn : 1_FF || IB_Registration_TC_002 : Validate registration for the IB">
+    <parameter name="StepDefinations" value="StepDefinations/Registration"/>
+    <parameter name="DataBinding" value="Register_2"/>
+    <parameter name="Environment" value="FF"/>
+    <parameter name="SheetName" value="Register"/>
+    <parameter name="Feature_File_Tag" value="@IB_Register_TC_001"/>
+    <parameter name="Feature_File" value="IB_Registration.feature"/>
+    <parameter name="Login_DataBindings" value="Credentials_2"/>
+    <classes>
+      <class name="Run_Time_xml_Generator.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Run_Time_xml_Generator.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- ExecuteOn : 1_FF || IB_Registration_TC_002 : Validate registration for the IB -->
+</suite> <!-- Failed suite [IB_Registration] -->

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="6" guice-stage="DEVELOPMENT" name="Failed suite [scenario name]" parallel="tests">
+  <parameter name="StepDefinations" value="StepDefinations"/>
+  <parameter name="DataBinding" value="Card2"/>
+  <parameter name="SheetName" value="Transfer"/>
+  <parameter name="Feature_File_Tag" value="@SC_001_TC_002"/>
+  <parameter name="Feature_File" value="Cards/Scenario_1.feature"/>
+  <test name="TestCase Name 1">
+    <parameter name="StepDefinations" value="StepDefinations"/>
+    <parameter name="DataBinding" value="Card1"/>
+    <parameter name="SheetName" value="Transfer"/>
+    <parameter name="Feature_File_Tag" value="@SC_001_TC_001"/>
+    <parameter name="Feature_File" value="Cards/Scenario_1.feature"/>
+    <classes>
+      <class name="Runner.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Runner.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- TestCase Name 1 -->
+  <test name="Test Case Name 2">
+    <parameter name="StepDefinations" value="StepDefinations"/>
+    <parameter name="DataBinding" value="Card2"/>
+    <parameter name="SheetName" value="Transfer"/>
+    <parameter name="Feature_File_Tag" value="@SC_001_TC_002"/>
+    <parameter name="Feature_File" value="Cards/Scenario_1.feature"/>
+    <classes>
+      <class name="Runner.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Runner.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- Test Case Name 2 -->
+  <test name="TestCase Name 3">
+    <parameter name="StepDefinations" value="StepDefinations"/>
+    <parameter name="DataBinding" value="Card1"/>
+    <parameter name="SheetName" value="Transfer"/>
+    <parameter name="Feature_File_Tag" value="@SC_001_TC_001"/>
+    <parameter name="Feature_File" value="Cards/Scenario_1.feature"/>
+    <classes>
+      <class name="Runner.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Runner.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- TestCase Name 3 -->
+  <test name="Test Case Name 4  ">
+    <parameter name="StepDefinations" value="StepDefinations"/>
+    <parameter name="DataBinding" value="Card2"/>
+    <parameter name="SheetName" value="Transfer"/>
+    <parameter name="Feature_File_Tag" value="@SC_001_TC_002"/>
+    <parameter name="Feature_File" value="Cards/Scenario_1.feature"/>
+    <classes>
+      <class name="Runner.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Runner.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- Test Case Name 4   -->
+</suite> <!-- Failed suite [scenario name] -->

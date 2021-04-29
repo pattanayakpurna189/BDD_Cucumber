@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [SC_001 (0)]" parallel="tests">
+  <parameter name="StepDefinations" value="StepDefinations"/>
+  <parameter name="DataBinding" value="Card2"/>
+  <parameter name="SheetName" value="Transfer"/>
+  <parameter name="Feature_File_Tag" value="@SC_001_TC_002"/>
+  <parameter name="Feature_File" value="Cards/Scenario_1.feature"/>
+  <test name="SC_001_TC_001 : Validate within bank transfer">
+    <parameter name="StepDefinations" value="StepDefinations"/>
+    <parameter name="DataBinding" value="Card1"/>
+    <parameter name="SheetName" value="Transfer"/>
+    <parameter name="Feature_File_Tag" value="@SC_001_TC_001"/>
+    <parameter name="Feature_File" value="Cards/Scenario_1.feature"/>
+    <classes>
+      <class name="Runner.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Runner.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- SC_001_TC_001 : Validate within bank transfer -->
+  <test name="SC_001_TC_002 : Validate other bank transfer">
+    <parameter name="StepDefinations" value="StepDefinations"/>
+    <parameter name="DataBinding" value="Card2"/>
+    <parameter name="SheetName" value="Transfer"/>
+    <parameter name="Feature_File_Tag" value="@SC_001_TC_002"/>
+    <parameter name="Feature_File" value="Cards/Scenario_1.feature"/>
+    <classes>
+      <class name="Runner.BDD_TestNG_Runner">
+        <methods>
+          <include name="runner_SetUp"/>
+        </methods>
+      </class> <!-- Runner.BDD_TestNG_Runner -->
+    </classes>
+  </test> <!-- SC_001_TC_002 : Validate other bank transfer -->
+</suite> <!-- Failed suite [SC_001 (0)] -->

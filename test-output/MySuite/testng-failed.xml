@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MySuite]" parallel="tests">
+  <parameter name="DataBinding" value="Card1"/>
+  <test name="Test11">
+    <parameter name="DataBinding" value="Card1"/>
+    <classes>
+      <class name="Test_Functions.Test1"/>
+    </classes>
+  </test> <!-- Test11 -->
+</suite> <!-- Failed suite [MySuite] -->
